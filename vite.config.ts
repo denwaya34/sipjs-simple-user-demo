@@ -7,7 +7,7 @@ const __dirname = import.meta.dirname;
 const root = resolve(__dirname, 'src');
 
 export default defineConfig({
-  root: 'src',
+  root: root,
   base: '/sipjs-simple-user-demo/',
   server: {
     open: true,
