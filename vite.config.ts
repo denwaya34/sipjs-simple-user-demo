@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite';
 import { checker } from 'vite-plugin-checker';
+import { resolve } from 'node:path';
 
-// https://vite.dev/config/
+const __dirname = import.meta.dirname;
+
+const root = resolve(__dirname, 'src');
+
 export default defineConfig({
+  root: 'src',
   base: '/sipjs-simple-user-demo/',
   server: {
     open: true,
@@ -11,13 +16,19 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        index: resolve(root, 'index.html'),
+        demo1: resolve(root, 'demo-1.html'),
+      },
+    },
   },
   plugins: [
     checker({
       typescript: true,
       eslint: {
         useFlatConfig: true,
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+        lintCommand: 'eslint "./**/*.{ts,tsx}"',
       },
     }),
   ],
