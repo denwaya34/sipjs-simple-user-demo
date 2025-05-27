@@ -6,11 +6,6 @@ export default defineConfig({
   server: {
     open: true,
     proxy: {
-      '/api/': {
-        target: 'https://test.u.biztel.jp:8000',
-        secure: false,
-        changeOrigin: true,
-      },
     },
   },
   build: {
