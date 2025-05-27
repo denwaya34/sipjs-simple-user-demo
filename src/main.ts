@@ -1,5 +1,5 @@
-import { SimpleUser, SimpleUserDelegate, SimpleUserOptions } from '../lib/platform/web/index.js';
-import { getAudio, getButton, getButtons, getInput, getSpan } from './demo-utils.js';
+import { SimpleUser, type SimpleUserDelegate, type SimpleUserOptions } from 'sip.js/lib/platform/web';
+import { getAudio, getButton, getButtons, getInput, getSpan } from './demo-utils';
 
 const serverSpan = getSpan('server');
 const targetSpan = getSpan('target');
@@ -189,7 +189,7 @@ const holdCheckboxDisabled = (disabled: boolean): void => {
 // Add change listener to mute checkbox
 muteCheckbox.addEventListener('change', () => {
   if (muteCheckbox.checked) {
-    // Checkbox is checked..
+    // Checkbox is checked.
     simpleUser.mute();
     if (simpleUser.isMuted() === false) {
       muteCheckbox.checked = false;
@@ -198,7 +198,7 @@ muteCheckbox.addEventListener('change', () => {
     }
   }
   else {
-    // Checkbox is not checked..
+    // Checkbox is not checked.
     simpleUser.unmute();
     if (simpleUser.isMuted() === true) {
       muteCheckbox.checked = true;
