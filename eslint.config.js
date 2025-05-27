@@ -3,6 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import { defineConfig } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
+import html from '@html-eslint/eslint-plugin';
 
 export default defineConfig([
   {
@@ -28,4 +29,14 @@ export default defineConfig([
   stylistic.configs.customize({
     semi: true,
   }),
+  {
+    files: ['**/*.html'],
+    plugins: {
+      html,
+    },
+    language: 'html/html',
+    rules: {
+      'html/no-duplicate-class': 'error',
+    },
+  },
 ]);
