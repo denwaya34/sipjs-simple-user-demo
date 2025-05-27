@@ -20,6 +20,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "query-string": "9.2.0",
     "sip.js": "0.21.2"
   }
 }
