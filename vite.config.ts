@@ -20,6 +20,8 @@ export default defineConfig({
       input: {
         index: resolve(root, 'index.html'),
         demo1: resolve(root, 'demo-1.html'),
+        demo2: resolve(root, 'demo-2.html'),
+        demo3: resolve(root, 'demo-3.html'),
       },
     },
   },
