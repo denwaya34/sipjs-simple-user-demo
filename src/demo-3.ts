@@ -33,7 +33,7 @@ class SimpleUserWithDataChannel extends SimpleUser {
     if (!dataChannel) {
       return;
     }
-    dataChannel.onclose = (event) => {
+    dataChannel.onclose = (_event) => {
       console.log(`[${this.id}] data channel onClose`);
       this.messageInput.disabled = true;
       this.receiveDiv.classList.add('disabled');
@@ -53,7 +53,7 @@ class SimpleUserWithDataChannel extends SimpleUser {
       this.receiveDiv.appendChild(el);
       this.receiveDiv.scrollTop = this.receiveDiv.scrollHeight;
     };
-    dataChannel.onopen = (event) => {
+    dataChannel.onopen = (_event) => {
       console.log(`[${this.id}] data channel onOpen`);
       this.messageInput.disabled = false;
       this.receiveDiv.classList.remove('disabled');
