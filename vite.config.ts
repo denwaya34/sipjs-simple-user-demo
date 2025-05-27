@@ -19,6 +19,10 @@ export default defineConfig({
   plugins: [
     checker({
       typescript: true,
+      eslint: {
+        useFlatConfig: true,
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
     }),
   ],
 });
