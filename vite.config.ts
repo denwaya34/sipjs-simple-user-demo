@@ -3,7 +3,7 @@ import { checker } from 'vite-plugin-checker';
 import { resolve } from 'node:path';
 
 const __dirname = import.meta.dirname;
-
+const outDir = resolve(__dirname, 'dist');
 const root = resolve(__dirname, 'src');
 
 export default defineConfig({
@@ -15,6 +15,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: outDir,
     sourcemap: true,
     rollupOptions: {
       input: {
