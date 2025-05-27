@@ -1,6 +1,7 @@
 import './demo-1.css';
 import { SimpleUser, type SimpleUserDelegate, type SimpleUserOptions } from 'sip.js/lib/platform/web';
 import { getAudio, getButton, getButtons, getInput, getSpan } from './demo-utils';
+// import { URI } from 'sip.js';
 
 const serverSpan = getSpan('server');
 const targetSpan = getSpan('target');
@@ -66,6 +67,9 @@ const simpleUserOptions: SimpleUserOptions = {
   userAgentOptions: {
     // logLevel: "debug",
     displayName,
+    // uri: new URI('sip', 'webrtc_client', 'Asterisk server IP Address'),
+    // authorizationUsername: 'webrtc_client',
+    // authorizationPassword: 'webrtc_client',
   },
 };
 
