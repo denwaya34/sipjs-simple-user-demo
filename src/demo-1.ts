@@ -16,10 +16,12 @@ const holdCheckbox = getInput('hold');
 const muteCheckbox = getInput('mute');
 
 // WebSocket Server URL
+// const webSocketServer = `wss://{Asterisk IP}:8089/ws`;
 const webSocketServer = 'wss://edge.sip.onsip.com';
 serverSpan.innerHTML = webSocketServer;
 
 // Destination URI
+// const target = 'sip:200@{Asterisk IP}:8089';
 const target = 'sip:echo@sipjs.onsip.com';
 targetSpan.innerHTML = target;
 
